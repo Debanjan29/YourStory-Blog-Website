@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{% extends 'base.html' %}
+
+{% block title %} Blog {% endblock title %}
+
+{% block BlogA %}
+  active
+{% endblock BlogA %}
+
+{% block body %}
+
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #2196F3; /* Blue background */
+        font-family: Arial, sans-serif;
+      }
+      .page-container {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        height: 100vh;
+        background-color: rgba(51, 29, 29, 0.249);
+      }
+      .blog-container {
+        padding-left: 50px;
+        background-color: #f2f2f2; /* Grey div */
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 600px;
+        height: 50px;
+      }
+      .blog-title {
+        font-size: 24px;
+        color: #333;
+      }
+      .blog-author, .blog-date {
+        color: #666;
+      }
+      .blog-content {
+        margin-top: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="blog-container">
+        <h2 class="blog-title">Sample Blog Title</h2>
+        <p class="blog-author">Author: John Doe</p>
+        <p class="blog-date">Published on: July 20, 2023</p>
+        <div class="blog-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida, ligula eget tristique laoreet, augue mauris bibendum tellus, non rhoncus lectus metus ac sapien. Sed eu tincidunt purus. Duis vel tortor vel felis elementum feugiat. Nunc vel metus et orci volutpat rhoncus. Pellentesque sollicitudin, nulla vel blandit convallis, metus felis elementum mauris, a interdum dui est non quam.</p>
+          <p>Curabitur euismod nulla purus, id dapibus lectus tincidunt vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ut feugiat eros. Nulla facilisi. Pellentesque nec feugiat tortor, nec volutpat orci. Nullam in neque vestibulum, venenatis ex ac, iaculis orci. Suspendisse potenti.</p>
+          <!-- Add more content here -->
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+
+
+
+ 
+{% endblock body %}
+
+<!--
+  <main class="container py-4">
+
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-60 px-0">
+      <h1 class="display-4 fst-italic font-weight-bold">{{post.Title}}</h1>
+      <p class="lead my-3 display-3"><pre>{{post.Content}}</pre></p>
+    </div>
+  </div>
+</main>
+-->

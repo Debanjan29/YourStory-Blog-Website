@@ -1,0 +1,4 @@
+.\dj2\Scripts\activate 
+
+
+dj2 is name of environment

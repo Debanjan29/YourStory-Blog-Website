@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %} Post a Blog {% endblock title %}
+
+{% block  BlogA %}
+  active <!--This will light up/highlight are button when active-->
+{% endblock BlogA %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container my-5">
+  <div class="cc text-center text-uppercase font-italic">
+<h3>Write a Blog! </h3>
+</div>
+
+<div class="conta">
+<form action="/postBlog/" method="post">
+{% csrf_token %}
+
+      <div class="form-group">
+        <label for="title11"><b>Title</b></label>
+        <input type="text" class="form-control" id="title11" name="title11" required placeholder="Give a short title (max 25 words)"> <!--name is important to extract the post request data-->
+      </div>
+      
+      <div class="form-group">
+         <label for="content11"><b>Write your Blog!!</b></label>
+         <textarea class="form-control" name="content11" id="content11" cols="20" rows="15" required pre></textarea></pre> <!--name is important to extract the post request data-->
+        </div>
+      
+      <div class="buttonn">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+</form>
+</div>
+</div>
+{% else %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login to Write a Blog</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 20px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #080707;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-top: 100px;
+    }
+    .col{
+      color: #e90d0d;
+      text-align: center;
+      
+    }
+    p {
+      color: #f2e7e7;
+      line-height: 5.5;
+    }
+    .login-link {
+      color: #4caf50;
+      text-decoration: none;
+    }
+    .signup-link {
+      color: #2196f3;
+      text-decoration: none;
+    }
+    .signup-link:hover{
+      color:#4caf50;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="col"><h1>Login to Write a Blog</h1></div>
+    <p class="text-center">Please <a class="login-link" href="/login">login</a> or <a class="signup-link" href="/">sign up</a> to be able to write a blog.</p>
+  </div>
+</body>
+</html>
+
+{% endif %}
+{% endblock %}
+
+

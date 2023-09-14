@@ -1,0 +1,26 @@
+/* $primary: rgb(179, 93, 179);
+@import "mysite\static\node_modules\bootstrap\scss\bootstrap.scss"; */
+
+.container3{
+    border-radius: 5;
+    border-style: solid;
+    border-color: red;
+
+}
+#container3{
+    border-radius: 5;
+    border-style: solid;
+    border-color: red;
+
+}
+body {
+    background-color: lightblue;
+    font-family: verdana;
+  }
+
+.container{
+    width: min-content;
+}
+h1{
+    color: red;
+}
